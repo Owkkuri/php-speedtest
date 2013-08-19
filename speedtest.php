@@ -182,7 +182,7 @@ class speedtest
         } else {
             logResults(round($downloadSpeed, 2), "d");
             if ($duration < 4) {
-                print "Duration is " . round($duration, 2) . "sec - this may introduce errors." . PHP_EOL;
+//                print "Duration is " . round($duration, 2) . "sec - this may introduce errors." . PHP_EOL;
             }
             print round($downloadSize / pow(1024, 2), 2) . "MB took " . round($duration, 2) . " seconds at " . round($downloadSpeed, 2) . "Mbps" . PHP_EOL;
             $this->globaldownloadspeed += $downloadSpeed;
