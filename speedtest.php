@@ -15,7 +15,7 @@ class speedtest {
     private $uploads="upload/";
     private $datadir="data/";
     private $useragent = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.13) Gecko/20080311 Firefox/2.0.0.13';
-    private $speedtestServersUrl = 'http://speedtest.net/speedtest-servers.php';
+    private $speedtestServersUrl = 'http://www.speedtest.net/speedtest-servers.php';
     private $speedtestServersFile = 'testservers.xml';
     private $countryCode = 'ZA';
     private $do_size = array( 1 => 500, 2 => 1000, 3 => 1500, 4 => 2000, 5 => 2500, 6 => 3000, 7 => 3500, 8 => 4000 );
