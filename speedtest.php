@@ -201,8 +201,11 @@ class speedtest
         /* create the socket, the last '1' denotes ICMP */
         $socket = socket_create(AF_INET, SOCK_RAW, 1);
 
+        $sec = 0;
+        $usec = 500 * 1000;
+
         /* set socket receive timeout to 1 second */
-        socket_set_option($socket, SOL_SOCKET, SO_RCVTIMEO, array("sec" => 2, "usec" => 0));
+        socket_set_option($socket, SOL_SOCKET, SO_RCVTIMEO, array("sec" =>$sec, "usec" => $usec));
 
         /* connect to socket */
         socket_connect($socket, $host, null);
@@ -210,6 +213,7 @@ class speedtest
         /* record start time */
         list($start_usec, $start_sec) = explode(" ", microtime());
         $start_time = ((float)$start_usec + (float)$start_sec);
+
 
         socket_send($socket, $package, strlen($package), 0);
 
@@ -221,7 +225,7 @@ class speedtest
 
             return round($total_time * 1000,2);
         } else {
-            return 2000;
+            return round((((float)$sec  * 1000)+((float)$usec / 1000)),2);
         }
 
         socket_close($socket);
