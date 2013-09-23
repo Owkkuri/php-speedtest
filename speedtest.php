@@ -177,7 +177,7 @@ class speedtest
 
         //unlink($file);
 
-        if ($duration < 4 && $size != 8) {
+        if ($duration < 4 && $size != 19) {
             $this->download(++$size, $round, $serverdetails);
         } else {
             logResults(round($downloadSpeed, 2), "d");
