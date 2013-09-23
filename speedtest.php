@@ -19,7 +19,7 @@ class speedtest
     private $speedtestServersUrl = 'http://www.speedtest.net/speedtest-servers.php';
     private $speedtestServersFile = 'testservers.xml';
     private $countryCode = 'ZA';
-    private $do_size = array(1 => 500, 2 => 1000, 3 => 1500, 4 => 2000, 5 => 2500, 6 => 3000, 7 => 3500, 8 => 4000);
+    private $do_size = array(1 => 500, 2 => 1000, 3 => 1500, 4 => 2000, 5 => 2500, 6 => 3000, 7 => 3500, 8 => 4000, 9 => 5000, 10 => 5500, 11 => 6500, 12 => 7000, 13 => 7500, 14 =>8000, 15 =>8500, 16 => 9000, 17 => 9500, 18 => 10000, 19 => 20000);
     private $randoms = null;
     private $time = null;
     private $day = null;
